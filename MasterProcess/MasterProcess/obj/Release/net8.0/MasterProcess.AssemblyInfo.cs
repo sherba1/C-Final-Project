@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MasterProcess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd161cc6df698d91bba300729c4c8a9c4b4e3541")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8c46499a1a808efe8bcf71de7bfbd4c08427ef2")]
 [assembly: System.Reflection.AssemblyProductAttribute("MasterProcess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MasterProcess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

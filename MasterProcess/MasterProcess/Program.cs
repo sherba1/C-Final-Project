@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 class Program
 {
     static void Main(string[] args)
-    {        
-        // CPU Core 3 ( 8 in binary )
+    {
+        // Set CPU to Core 3 ( 8 in Binary )
         Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)(8);
 
         string pipe1 = args.Length > 0 ? args[0] : "agent1";
         string pipe2 = args.Length > 1 ? args[1] : "agent2";
 
+        Console.WriteLine("Master starting...");
         Task t1 = Task.Run(() => ListenPipe(pipe1));
         Task t2 = Task.Run(() => ListenPipe(pipe2));
 
@@ -27,14 +28,30 @@ class Program
     {
         try
         {
-            using var pipeServer = new NamedPipeServerStream(pipeName, PipeDirection.In, 1, PipeTransmissionMode.Message);
+            using NamedPipeServerStream pipeServer = new NamedPipeServerStream(pipeName, PipeDirection.In, 1, PipeTransmissionMode.Message);
+
+            Console.WriteLine($"Waiting for connection on pipe '{pipeName}'...");
             pipeServer.WaitForConnection();
 
-            using var reader = new StreamReader(pipeServer);
-            while (reader.ReadLine() != null)
-            {
+            using StreamReader reader = new StreamReader(pipeServer);
 
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                var parts = line.Split(':');
+                if (parts.Length == 3)
+                {
+                    string fileName = parts[0];
+                    string word = parts[1];
+                    Console.WriteLine($"[{pipeName}] {fileName}: {word}");
+                }
+                else
+                {
+                    Console.WriteLine($"[{pipeName}] {line}");
+                }
             }
+
+            Console.WriteLine($"Pipe '{pipeName}' disconnected.");
         }
         catch (Exception ex)
         {

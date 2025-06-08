@@ -1,0 +1,15 @@
+C:\FinalC#\Scanner1\Scanner1\bin\Debug\net8.0\Scanner1.exe
+C:\FinalC#\Scanner1\Scanner1\bin\Debug\net8.0\Scanner1.deps.json
+C:\FinalC#\Scanner1\Scanner1\bin\Debug\net8.0\Scanner1.runtimeconfig.json
+C:\FinalC#\Scanner1\Scanner1\bin\Debug\net8.0\Scanner1.dll
+C:\FinalC#\Scanner1\Scanner1\bin\Debug\net8.0\Scanner1.pdb
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\Scanner1.GeneratedMSBuildEditorConfig.editorconfig
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\Scanner1.AssemblyInfoInputs.cache
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\Scanner1.AssemblyInfo.cs
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\Scanner1.csproj.CoreCompileInputs.cache
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\Scanner1.dll
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\refint\Scanner1.dll
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\Scanner1.pdb
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\Scanner1.genruntimeconfig.cache
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\ref\Scanner1.dll
+C:\FinalC#\Scanner1\Scanner1\obj\Debug\net8.0\Scanner1.sourcelink.json

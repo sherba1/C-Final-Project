@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# C-Final-Project
-C# Scanner ( TXT )
 =======
 # C# Final Project - File Content Indexer
 
@@ -43,4 +40,3 @@ The system consists of 3 separate console applications:
 [agent1] example.txt: hello
 [agent1] example.txt: world
 [agent2] notes.txt: school
->>>>>>> d37d190 (C# Project, Scanner)

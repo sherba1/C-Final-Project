@@ -2,32 +2,21 @@ using System;
 using System.IO;
 using System.IO.Pipes;
 using System.Collections.Generic;
-using System.Threading;
 using System.Diagnostics;
 
 class Program
 {
-    static Dictionary<string, Dictionary<string, int>> fileWordCounts = new Dictionary<string, Dictionary<string, int>>();
-    static string directoryPath;
-
     static void Main(string[] args)
     {
         Console.Title = "Scanner A";
 
-        Console.Write("Enter the directory path with .txt files: ");
-        directoryPath = Console.ReadLine();
+        Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)(1);
 
-        Thread readerThread = new Thread(ReadFiles);
-        Thread senderThread = new Thread(SendToMaster);
+        Console.Write("Enter directory path with .txt files: ");
+        string directoryPath = Console.ReadLine();
 
-        readerThread.Start();
-        readerThread.Join(); 
+        var fileWordCounts = new Dictionary<string, Dictionary<string, int>>();
 
-        senderThread.Start();
-    }
-
-    static void ReadFiles()
-    {
         foreach (string file in Directory.GetFiles(directoryPath, "*.txt"))
         {
             string fileName = Path.GetFileName(file);
@@ -36,32 +25,28 @@ class Program
 
             foreach (string word in words)
             {
-                string cleaned = word.Trim().ToLower();
-                if (string.IsNullOrWhiteSpace(cleaned)) continue;
+                string w = word.Trim().ToLower();
+                if (string.IsNullOrEmpty(w)) continue;
 
                 if (!fileWordCounts.ContainsKey(fileName))
                     fileWordCounts[fileName] = new Dictionary<string, int>();
 
-                if (!fileWordCounts[fileName].ContainsKey(cleaned))
-                    fileWordCounts[fileName][cleaned] = 0;
+                if (!fileWordCounts[fileName].ContainsKey(w))
+                    fileWordCounts[fileName][w] = 0;
 
-                fileWordCounts[fileName][cleaned]++;
+                fileWordCounts[fileName][w]++;
             }
         }
-    }
 
-    static void SendToMaster()
-    {
-        using (NamedPipeClientStream pipe = new NamedPipeClientStream(".", "agent1", PipeDirection.Out))
-        using (StreamWriter writer = new StreamWriter(pipe))
+        using (var pipe = new NamedPipeClientStream(".", "agent", PipeDirection.Out))
+        using (var writer = new StreamWriter(pipe))
         {
             pipe.Connect();
             foreach (var fileEntry in fileWordCounts)
             {
-                foreach (var wordEntry in fileEntry.Value)
+                foreach (var pair in fileEntry.Value)
                 {
-                    string line = $"{fileEntry.Key}:{wordEntry.Key}:{wordEntry.Value}";
-                    writer.WriteLine(line);
+                    writer.WriteLine($"{fileEntry.Key}:{pair.Key}:{pair.Value}");
                 }
             }
             writer.Flush();

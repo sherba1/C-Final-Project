@@ -31,7 +31,7 @@ class Program
             }
         }
 
-        // SET CPU to Core 1
+        // SET CPU to Core 0
         Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)(1);
 
         Thread readThread = new Thread(() => ProcessFiles(directoryPath));

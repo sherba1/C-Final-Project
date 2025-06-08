@@ -1,0 +1,14 @@
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\bin\Debug\net8.0\MasterProcess.exe
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\bin\Debug\net8.0\MasterProcess.deps.json
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\bin\Debug\net8.0\MasterProcess.runtimeconfig.json
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\bin\Debug\net8.0\MasterProcess.dll
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\bin\Debug\net8.0\MasterProcess.pdb
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\obj\Debug\net8.0\MasterProcess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\obj\Debug\net8.0\MasterProcess.AssemblyInfoInputs.cache
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\obj\Debug\net8.0\MasterProcess.AssemblyInfo.cs
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\obj\Debug\net8.0\MasterProcess.csproj.CoreCompileInputs.cache
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\obj\Debug\net8.0\MasterProcess.dll
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\obj\Debug\net8.0\refint\MasterProcess.dll
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\obj\Debug\net8.0\MasterProcess.pdb
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\obj\Debug\net8.0\MasterProcess.genruntimeconfig.cache
+C:\Users\Sher\Desktop\FinalC#\MasterProcess\MasterProcess\obj\Debug\net8.0\ref\MasterProcess.dll

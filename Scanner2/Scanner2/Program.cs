@@ -31,8 +31,8 @@ class Program
             }
         }
 
-        // SET CPU to Core 0
-        Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)(1);
+        // SET CPU to Core 2 ( 4 In binary is )
+        Process.GetCurrentProcess().ProcessorAffinity = (IntPtr)(4);
 
         Thread readThread = new Thread(() => ProcessFiles(directoryPath));
         readThread.Start();
@@ -46,7 +46,7 @@ class Program
     {
         try
         {
-            string pipeName = "agent1";
+            string pipeName = "agent2";
 
             using (NamedPipeClientStream pipeClient = new NamedPipeClientStream(".", pipeName, PipeDirection.Out))
             {

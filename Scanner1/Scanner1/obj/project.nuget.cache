@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NHTxUa0Btzs=",
+  "dgSpecHash": "/xKot0C7Da4=",
   "success": true,
-  "projectFilePath": "C:\\FinalC#\\Scanner1\\Scanner1\\Scanner1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\FinalC#\\Scanner1\\Scanner1\\Scanner.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sher\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.15\\microsoft.dotnet.ilcompiler.8.0.15.nupkg.sha512",
+    "C:\\Users\\Sher\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.15\\microsoft.net.illink.tasks.8.0.15.nupkg.sha512",
+    "C:\\Users\\Sher\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.15\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.15.nupkg.sha512"
+  ],
   "logs": []
 }
